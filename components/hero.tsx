@@ -95,27 +95,27 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         {/* Badge */}
-        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-2">
+        <div className="mb-10 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-5 py-2.5">
           <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
           <span className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Performance. Automation. Scale.
+            Technology-Powered Growth Partner
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl lg:text-8xl text-balance">
-          Engineering Growth Through{" "}
-          <span className="text-accent">Systems & Performance</span>
+        <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl lg:text-8xl text-balance leading-[1.05]">
+          We Engineer Growth{" "}
+          <span className="text-accent">Through Systems</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="mb-3 text-lg font-medium tracking-wide text-muted-foreground md:text-xl">
+        <p className="mb-4 text-lg font-medium tracking-wide text-foreground/70 md:text-xl">
           High-Code Web Applications. Omnichannel Marketing. AI Automation.
         </p>
-        <p className="mx-auto mb-10 max-w-2xl text-base text-muted-foreground/80 leading-relaxed md:text-lg">
-          We are your technology-powered growth partner -- building scalable web
-          applications and running full-funnel performance marketing campaigns
-          that deliver measurable ROI.
+        <p className="mx-auto mb-12 max-w-2xl text-base text-muted-foreground/80 leading-relaxed md:text-lg">
+          Favor combines production-grade web engineering with full-funnel
+          performance marketing to help ambitious brands scale predictably
+          and profitably.
         </p>
 
         {/* CTAs */}
@@ -140,17 +140,18 @@ export function Hero() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-16">
+        <div className="mt-20 flex flex-wrap items-center justify-center gap-px rounded-2xl border border-border/50 bg-border/20 overflow-hidden">
           {[
             { value: "200+", label: "Campaigns Managed" },
-            { value: "3-6X", label: "Avg ROAS" },
-            { value: "50+", label: "Active Clients" },
+            { value: "3-6X", label: "Avg ROAS Delivered" },
+            { value: "11+", label: "Active Client Partners" },
+            { value: "13+", label: "Platforms Covered" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-3xl font-bold text-accent md:text-4xl">
+            <div key={stat.label} className="flex-1 min-w-[140px] bg-background/80 px-6 py-5 text-center backdrop-blur-sm">
+              <p className="text-2xl font-bold text-accent md:text-3xl">
                 {stat.value}
               </p>
-              <p className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
+              <p className="mt-1 text-[10px] tracking-wider text-muted-foreground uppercase md:text-xs">
                 {stat.label}
               </p>
             </div>

@@ -16,6 +16,11 @@ import {
   RefreshCcw,
   Briefcase,
   CheckCircle2,
+  ClipboardCheck,
+  Compass,
+  Rocket,
+  TrendingUp,
+  FileCheck,
 } from "lucide-react"
 
 const services = [
@@ -27,12 +32,12 @@ const services = [
   {
     icon: Search,
     title: "Google Search & Display Ads",
-    desc: "High-intent search campaigns and display network reach for maximum visibility and conversions.",
+    desc: "High-intent search campaigns and display network reach for maximum conversions.",
   },
   {
     icon: ShoppingCart,
     title: "Google Shopping",
-    desc: "Product feed optimization, shopping campaign management, and dynamic remarketing for e-commerce.",
+    desc: "Product feed optimization, shopping campaigns, and dynamic remarketing for e-commerce.",
   },
   {
     icon: Briefcase,
@@ -47,38 +52,72 @@ const services = [
   {
     icon: Search,
     title: "SEO (Full-Service)",
-    desc: "Technical SEO, on-page optimization, content strategy, link building, and local SEO.",
+    desc: "Technical SEO, on-page optimization, content strategy, and local SEO.",
   },
   {
     icon: Mail,
     title: "Email Marketing & Automation",
-    desc: "Drip sequences, newsletters, segmentation, and automated nurture funnels that convert.",
+    desc: "Drip sequences, newsletters, segmentation, and automated nurture funnels.",
   },
   {
     icon: MessageSquare,
     title: "WhatsApp Automation",
-    desc: "Automated WhatsApp flows for lead follow-up, cart recovery, appointment reminders, and support.",
+    desc: "Automated flows for lead follow-up, cart recovery, and appointment reminders.",
   },
   {
     icon: Bot,
     title: "AI & CRM Automation",
-    desc: "Zapier, Make, n8n workflows connecting your CRM, ads, email, and WhatsApp into one system.",
+    desc: "Zapier, Make, n8n workflows connecting your CRM, ads, email, and WhatsApp.",
   },
   {
     icon: Target,
     title: "Conversion Rate Optimization",
-    desc: "A/B testing, heatmap analysis, funnel optimization, and landing page experimentation.",
+    desc: "A/B testing, heatmap analysis, and landing page experimentation.",
   },
   {
     icon: RefreshCcw,
     title: "Retargeting & Remarketing",
-    desc: "Cross-platform retargeting to bring back visitors and convert them into paying customers.",
+    desc: "Cross-platform retargeting to convert visitors into paying customers.",
   },
   {
     icon: BarChart3,
     title: "Analytics & Reporting",
-    desc: "Custom GA4 setups, server-side tracking, live dashboards, and weekly strategy reports.",
+    desc: "Custom GA4 setups, server-side tracking, live dashboards, and strategy reports.",
   },
+]
+
+const executionSteps = [
+  {
+    icon: ClipboardCheck,
+    title: "Account & Competitor Audit",
+    desc: "We audit your existing ad accounts, competitor positioning, and analytics setup.",
+  },
+  {
+    icon: Compass,
+    title: "Channel Strategy & Budget Allocation",
+    desc: "We define the right platforms, funnel stages, and budget splits for your goals.",
+  },
+  {
+    icon: Rocket,
+    title: "Campaign Build & Launch",
+    desc: "Creative production, audience setup, tracking configuration, and campaign launch.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Optimize & Scale",
+    desc: "Weekly optimization cycles with A/B testing, bid adjustments, and scaling winners.",
+  },
+]
+
+const deliverables = [
+  "Campaign setup across all assigned platforms",
+  "Creative direction, ad copy, and visual production",
+  "Landing page audit and recommendations",
+  "GA4 + conversion tracking setup",
+  "Monthly/bi-weekly performance reports",
+  "CRM integration and lead flow setup",
+  "A/B testing on creatives and audiences",
+  "Dedicated account manager and strategy calls",
 ]
 
 const stats = [
@@ -86,22 +125,6 @@ const stats = [
   { value: 13, suffix: "+", label: "Platforms Covered" },
   { value: 6, suffix: "X", label: "Avg ROAS" },
   { value: 50, suffix: "+", label: "Active Clients" },
-]
-
-const platforms = [
-  "Meta Ads",
-  "Google Search",
-  "Google Display",
-  "Google Shopping",
-  "LinkedIn Ads",
-  "Bing Ads",
-  "SEO",
-  "Email Marketing",
-  "WhatsApp Automation",
-  "CRM Automation",
-  "Retargeting",
-  "CRO",
-  "AI Workflows",
 ]
 
 const whyChoose = [
@@ -157,6 +180,18 @@ export function MarketingContent() {
 
   return (
     <div ref={ref} className="relative">
+      {/* Outcome Statement */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="text-lg font-medium text-muted-foreground leading-relaxed md:text-xl">
+            Favor Digital Marketing is your full-stack performance marketing
+            partner. We don{"'"}t just run ads -- we engineer complete
+            acquisition systems across every platform that drives revenue for
+            your business.
+          </p>
+        </div>
+      </section>
+
       {/* Services */}
       <section className="py-32 md:py-40">
         <div className="mx-auto max-w-6xl px-6">
@@ -164,7 +199,7 @@ export function MarketingContent() {
             <div className="mb-4 flex items-center justify-center gap-3">
               <div className="h-px w-12 bg-accent/50" />
               <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-                Our Platforms
+                Channels We Manage
               </span>
               <div className="h-px w-12 bg-accent/50" />
             </div>
@@ -172,8 +207,8 @@ export function MarketingContent() {
               Omnichannel Performance Marketing
             </h2>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
-              From paid ads to automation pipelines, we cover every channel that
-              drives revenue -- managed by a dedicated team obsessed with ROAS.
+              We cover every channel that drives revenue -- managed by a
+              dedicated team obsessed with ROAS.
             </p>
           </div>
 
@@ -191,7 +226,7 @@ export function MarketingContent() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20">
                   <service.icon size={24} className="text-accent" />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-foreground">
+                <h3 className="mb-2 text-base font-semibold text-foreground">
                   {service.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -203,18 +238,77 @@ export function MarketingContent() {
         </div>
       </section>
 
-      {/* Platform Tags */}
-      <section className="py-12 md:py-16">
+      {/* Execution Process */}
+      <section className="py-32 md:py-40">
         <div className="mx-auto max-w-5xl px-6">
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {platforms.map((p) => (
-              <span
-                key={p}
-                className="rounded-full border border-border bg-secondary/40 px-4 py-2 text-xs font-medium text-foreground"
-              >
-                {p}
+          <div className="mb-16 text-center">
+            <div className="mb-4 flex items-center justify-center gap-3">
+              <div className="h-px w-12 bg-accent/50" />
+              <span className="text-xs font-semibold tracking-widest text-accent uppercase">
+                How We Execute
               </span>
+              <div className="h-px w-12 bg-accent/50" />
+            </div>
+            <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
+              Our Marketing Execution Process
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {executionSteps.map((step, i) => (
+              <div
+                key={step.title}
+                className="glass-card flex items-start gap-5 rounded-2xl p-7"
+              >
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20">
+                  <span className="text-xs font-bold text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-base font-bold text-foreground">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="mb-12 text-center">
+            <div className="mb-4 flex items-center justify-center gap-3">
+              <div className="h-px w-12 bg-accent/50" />
+              <span className="text-xs font-semibold tracking-widest text-accent uppercase">
+                What You Get
+              </span>
+              <div className="h-px w-12 bg-accent/50" />
+            </div>
+            <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
+              Standard Deliverables
+            </h2>
+          </div>
+
+          <div className="glass-card rounded-2xl p-8">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {deliverables.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <FileCheck
+                    size={16}
+                    className="mt-1 shrink-0 text-accent"
+                  />
+                  <p className="text-sm text-foreground leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -253,7 +347,7 @@ export function MarketingContent() {
               <div className="h-px w-12 bg-accent/50" />
             </div>
             <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-              Why Choose Us
+              Results-Driven, Not Retainer-Driven
             </h2>
           </div>
 

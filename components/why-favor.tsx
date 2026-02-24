@@ -8,6 +8,7 @@ import {
   Cog,
   Globe,
   FileText,
+  ShieldCheck,
 } from "lucide-react"
 
 const reasons = [
@@ -40,6 +41,12 @@ const reasons = [
     title: "Transparent Cost Breakdown",
     description:
       "No hidden fees. Every proposal comes with a clear scope, deliverable list, and line-item pricing.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Full Ownership & IP Rights",
+    description:
+      "Everything we build belongs to you. Full source code, ad account access, and documentation handover included.",
   },
 ]
 

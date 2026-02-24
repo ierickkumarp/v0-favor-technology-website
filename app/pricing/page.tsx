@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
-import { GrowthPlanBuilder } from "@/components/growth-plan-builder"
 import { PricingCards } from "@/components/pricing-cards"
+import { PlanComparison } from "@/components/plan-comparison"
+import { GrowthPlanBuilder } from "@/components/growth-plan-builder"
 import { CtaBanner } from "@/components/cta-banner"
 
 export const metadata: Metadata = {
@@ -21,11 +22,12 @@ export default function PricingPage() {
           { label: "Pricing" },
         ]}
       />
-      <GrowthPlanBuilder />
       <PricingCards />
+      <PlanComparison />
+      <GrowthPlanBuilder />
       <CtaBanner
-        heading="Need a Custom Plan?"
-        description="Every business is different. Talk to our team and we will build a custom strategy and pricing proposal."
+        heading="Not Sure Which Plan Fits?"
+        description="Book a free strategy call. We will audit your current setup, understand your goals, and recommend the right plan for your business."
         ctaText="Book Strategy Call"
       />
     </>
