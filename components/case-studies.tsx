@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { useInView } from "@/hooks/use-in-view"
 import { AlertTriangle, Lightbulb, TrendingUp } from "lucide-react"
 
-const studies = [
+const allStudies = [
   {
     problem: "Low Leads & Poor Online Visibility",
     strategy: "SEO + Google Ads Funnel + Landing Page Optimization",
@@ -25,12 +25,20 @@ const studies = [
   },
 ]
 
-export function CaseStudies() {
+interface CaseStudiesProps {
+  filter?: string
+}
+
+export function CaseStudies({ filter }: CaseStudiesProps) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { threshold: 0.15 })
 
+  const studies = filter
+    ? allStudies.filter((s) => s.tag === filter)
+    : allStudies
+
   return (
-    <section id="case-studies" className="relative py-28 md:py-36">
+    <section className="relative py-28 md:py-36">
       <div className="animate-glow-pulse absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-accent/5 blur-[150px]" />
 
       <div ref={ref} className="relative mx-auto max-w-6xl px-6">
@@ -51,10 +59,10 @@ export function CaseStudies() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className={`grid gap-8 ${studies.length === 1 ? "max-w-lg mx-auto" : studies.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
           {studies.map((study, i) => (
             <div
-              key={study.tag}
+              key={study.tag + study.problem}
               className={`glass-card glass-card-hover flex flex-col rounded-2xl p-8 transition-all duration-500 ${
                 isInView
                   ? "translate-y-0 opacity-100"

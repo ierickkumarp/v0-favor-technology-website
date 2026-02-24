@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 import { ArrowRight, MessageCircle } from "lucide-react"
 
 export function Hero() {
@@ -119,8 +120,8 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-accent hover:shadow-[0_0_30px_rgba(15,76,117,0.5)]"
           >
             Get Free Strategy Call
@@ -128,14 +129,14 @@ export function Hero() {
               size={16}
               className="transition-transform group-hover:translate-x-1"
             />
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/contact"
             className="flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-accent/40 hover:bg-secondary/70"
           >
             <MessageCircle size={16} />
             Talk to Experts
-          </a>
+          </Link>
         </div>
 
         {/* Stats row */}

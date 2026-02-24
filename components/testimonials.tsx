@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { useInView } from "@/hooks/use-in-view"
 import { Star } from "lucide-react"
 
-const testimonials = [
+const allTestimonials = [
   {
     quote:
       "From wireframe to launch, Favor Apps made the process smooth and delivered on time.",
@@ -47,14 +47,43 @@ const testimonials = [
     role: "VP, IndustryMax",
     division: "Favor Media",
   },
+  {
+    quote:
+      "AI-integrated app delivered fast and clean. Truly innovative team.",
+    name: "Vignesh M.",
+    role: "CTO, NexGen Solutions",
+    division: "Favor Apps",
+  },
+  {
+    quote:
+      "Now ranking for 15+ keywords. Our organic visibility skyrocketed.",
+    name: "Priya A.",
+    role: "Founder, StyleHouse",
+    division: "Favor Digital Marketing",
+  },
+  {
+    quote:
+      "Photos boosted product sales. Their visual content is top-notch quality.",
+    name: "Anitha T.",
+    role: "Owner, CraftBazaar",
+    division: "Favor Media",
+  },
 ]
 
-export function Testimonials() {
+interface TestimonialsProps {
+  filter?: string
+}
+
+export function Testimonials({ filter }: TestimonialsProps) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { threshold: 0.1 })
 
+  const testimonials = filter
+    ? allTestimonials.filter((t) => t.division === filter)
+    : allTestimonials
+
   return (
-    <section id="testimonials" className="relative py-28 md:py-36">
+    <section className="relative py-28 md:py-36">
       <div ref={ref} className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">

@@ -24,7 +24,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-28 md:py-36">
+    <section className="relative py-28 md:py-36">
       <div className="animate-glow-pulse absolute left-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[150px]" />
 
       <div
@@ -33,23 +33,6 @@ export function Contact() {
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <div className="mb-16 text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <div className="h-px w-12 bg-accent/50" />
-            <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-              Get In Touch
-            </span>
-            <div className="h-px w-12 bg-accent/50" />
-          </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
-            {"Let's Build Something Great"}
-          </h2>
-          <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
-            Ready to transform your business? Reach out and our team will craft
-            a strategy tailored to your goals.
-          </p>
-        </div>
-
         <div className="grid gap-12 lg:grid-cols-5">
           {/* Form */}
           <div className="glass-card rounded-2xl p-8 lg:col-span-3">

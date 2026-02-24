@@ -21,7 +21,7 @@ export function WhyChoose() {
   const isInView = useInView(ref, { threshold: 0.2 })
 
   return (
-    <section id="why-favor" className="relative py-28 md:py-36">
+    <section className="relative py-28 md:py-36">
       <div
         ref={ref}
         className={`mx-auto max-w-4xl px-6 transition-all duration-700 ${
