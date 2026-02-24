@@ -5,11 +5,12 @@ import { useInView } from "@/hooks/use-in-view"
 import { Phone, Send } from "lucide-react"
 
 const services = [
-  "App Development",
-  "Digital Marketing",
-  "Media & Branding",
-  "AI Integration",
+  "Web App Development",
+  "Performance Marketing",
+  "SEO & Content Marketing",
+  "AI & CRM Automation",
   "Full Growth Strategy",
+  "Pricing Plan Inquiry",
 ]
 
 export function Contact() {

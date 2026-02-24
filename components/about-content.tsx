@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { useInView } from "@/hooks/use-in-view"
 import {
-  Layers,
+  Code2,
   TrendingUp,
   Zap,
   Target,
@@ -13,34 +13,34 @@ import {
 
 const values = [
   {
-    icon: Layers,
-    title: "Full-Stack Solutions",
-    desc: "From ideation to launch, we handle every layer of your digital presence — apps, marketing, and media.",
+    icon: Code2,
+    title: "High-Code Engineering",
+    desc: "Production-grade applications built with Next.js, Node.js, and modern frameworks -- no templates, no shortcuts.",
   },
   {
     icon: TrendingUp,
-    title: "Data-Driven Growth",
-    desc: "Every strategy is backed by analytics, ensuring measurable, transparent results for your business.",
+    title: "Performance-First Marketing",
+    desc: "Every campaign is optimized for ROAS. We run full-funnel strategies across 13+ platforms.",
   },
   {
     icon: Zap,
-    title: "AI-Powered Innovation",
-    desc: "We integrate cutting-edge AI into apps, marketing automation, and creative workflows.",
+    title: "AI-Powered Automation",
+    desc: "We deploy Zapier, Make, n8n, and custom AI workflows to eliminate manual work and scale operations.",
   },
   {
     icon: Target,
-    title: "Result-Focused Approach",
-    desc: "We don't just deliver services — we deliver outcomes. Every engagement is tied to real business metrics.",
+    title: "Measurable Outcomes",
+    desc: "We tie every engagement to real business metrics -- leads, revenue, ROAS, and conversion rates.",
   },
   {
     icon: Users,
-    title: "Dedicated Teams",
-    desc: "Each project gets a dedicated cross-functional team of developers, marketers, and creatives.",
+    title: "Dedicated Growth Teams",
+    desc: "Each client gets a cross-functional team of engineers, marketers, and automation specialists.",
   },
   {
     icon: Shield,
-    title: "Trusted & Secure",
-    desc: "We follow industry best practices for security, scalability, and code quality across every project.",
+    title: "Transparent & Secure",
+    desc: "Full ad account access, transparent reporting, industry-standard security, and clear SLAs.",
   },
 ]
 
@@ -56,7 +56,7 @@ export function AboutContent() {
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        {/* Mission */}
+        {/* Mission & Vision */}
         <div className="mb-20 grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <div className="mb-6 flex items-center gap-3">
@@ -66,14 +66,14 @@ export function AboutContent() {
               </span>
             </div>
             <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
-              Building the Future,{" "}
-              <span className="text-accent">One Brand at a Time</span>
+              Engineering Growth,{" "}
+              <span className="text-accent">Not Guesswork</span>
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed md:text-lg">
-              Favor is your all-in-one innovation hub. We build scalable apps,
-              drive measurable digital growth, and craft powerful brand media —
-              all under one roof. With Favor Apps, Favor Digital Marketing, and
-              Favor Media, we help businesses thrive in the modern world.
+              Favor is a technology-powered growth partner. We combine high-code
+              web development with omnichannel performance marketing and
+              AI-powered automation to build businesses that scale predictably
+              and profitably. No templates. No guesswork. Just systems that work.
             </p>
           </div>
           <div>
@@ -84,15 +84,14 @@ export function AboutContent() {
               </span>
             </div>
             <p className="mb-6 text-base text-muted-foreground leading-relaxed md:text-lg">
-              We envision a world where every business — from startups to
-              enterprises — has access to world-class technology, marketing, and
-              creative services. Our goal is to be the single growth partner that
-              companies trust to handle all three.
+              We envision a world where every ambitious brand has access to the
+              same caliber of technology and marketing infrastructure that
+              Fortune 500 companies use -- without the Fortune 500 budget.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed md:text-lg">
-              Our mission is simple: make digital growth accessible, affordable,
-              and result-driven. We combine technology with creativity to deliver
-              solutions that move the needle.
+              Our two divisions -- Favor Apps and Favor Digital Marketing -- work
+              in tandem: we build the platform, then we drive the traffic. One
+              partner, complete growth.
             </p>
           </div>
         </div>
@@ -103,12 +102,12 @@ export function AboutContent() {
             <div className="mb-4 flex items-center justify-center gap-3">
               <div className="h-px w-12 bg-accent/50" />
               <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-                Our Values
+                What Drives Us
               </span>
               <div className="h-px w-12 bg-accent/50" />
             </div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-              What Drives Us
+              Our Core Principles
             </h2>
           </div>
 

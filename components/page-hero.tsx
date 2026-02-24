@@ -15,7 +15,7 @@ export function PageHero({ title, tagline, breadcrumbs }: PageHeroProps) {
       {/* Glow orbs */}
       <div className="animate-glow-pulse absolute top-1/3 left-1/4 -z-10 h-[350px] w-[350px] rounded-full bg-primary/10 blur-[120px]" />
       <div
-        className="animate-glow-pulse absolute right-1/4 bottom-1/4 -z-10 h-[250px] w-[250px] rounded-full bg-accent/8 blur-[100px]"
+        className="animate-glow-pulse absolute right-1/4 bottom-1/4 -z-10 h-[250px] w-[250px] rounded-full bg-accent/[0.08] blur-[100px]"
         style={{ animationDelay: "2s" }}
       />
 

@@ -18,25 +18,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Favor — Innovate. Market. Inspire.',
+    default: 'Favor — Performance. Automation. Scale.',
     template: '%s | Favor',
   },
   description:
-    'Favor is your all-in-one innovation hub. We build scalable apps, drive measurable digital growth, and craft powerful brand media — all under one roof.',
+    'Favor is your technology-powered growth partner. High-code web applications, omnichannel performance marketing, and AI-powered automation systems.',
   keywords: [
-    'app development',
+    'web development',
+    'performance marketing',
     'digital marketing',
-    'media production',
     'SEO',
-    'SaaS',
-    'AI integration',
-    'branding',
+    'SaaS development',
+    'AI automation',
+    'Google Ads',
+    'Meta Ads',
+    'CRM automation',
     'Favor',
   ],
   openGraph: {
-    title: 'Favor — Innovate. Market. Inspire.',
+    title: 'Favor — Performance. Automation. Scale.',
     description:
-      'One Powerhouse — Three Divisions. Apps. Digital Marketing. Media.',
+      'High-code web applications. Omnichannel marketing. AI automation.',
     type: 'website',
   },
 }

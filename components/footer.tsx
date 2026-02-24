@@ -11,7 +11,7 @@ const quickLinks = [
 const serviceLinks = [
   { label: "Favor Apps", href: "/services/apps" },
   { label: "Favor Digital Marketing", href: "/services/marketing" },
-  { label: "Favor Media", href: "/services/media" },
+  { label: "Pricing Plans", href: "/pricing" },
 ]
 
 export function Footer() {
@@ -34,8 +34,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mb-6 text-sm text-muted-foreground leading-relaxed">
-              Your all-in-one innovation hub. Apps. Digital Marketing. Media.
-              Driving growth for modern businesses.
+              Your technology-powered growth partner. High-code web apps,
+              performance marketing, and AI automation.
             </p>
             <div className="flex gap-4">
               <a
@@ -112,7 +112,7 @@ export function Footer() {
             {`\u00A9 ${new Date().getFullYear()} Favor. All rights reserved.`}
           </p>
           <p className="text-xs text-muted-foreground">
-            Innovate. Market. Inspire.
+            Performance. Automation. Scale.
           </p>
         </div>
       </div>

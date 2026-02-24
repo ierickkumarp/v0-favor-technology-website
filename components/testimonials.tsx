@@ -21,10 +21,10 @@ const allTestimonials = [
   },
   {
     quote:
-      "Brand video won investor trust. Their storytelling approach is truly world-class.",
+      "Their automation setup saved us 20+ hours a week. CRM, emails, and WhatsApp all synced perfectly.",
     name: "Sundar K.",
     role: "Founder, GreenPath",
-    division: "Favor Media",
+    division: "Favor Digital Marketing",
   },
   {
     quote:
@@ -42,10 +42,10 @@ const allTestimonials = [
   },
   {
     quote:
-      "Corporate film wowed the expo crowd. Professional, creative, and impactful work.",
+      "Full-funnel setup across Meta and Google Shopping got us 5X ROAS within the first quarter.",
     name: "Rajeev D.",
     role: "VP, IndustryMax",
-    division: "Favor Media",
+    division: "Favor Digital Marketing",
   },
   {
     quote:
@@ -63,10 +63,10 @@ const allTestimonials = [
   },
   {
     quote:
-      "Photos boosted product sales. Their visual content is top-notch quality.",
+      "Our SaaS admin dashboard handles 10K+ users daily without a hitch. Truly robust engineering.",
     name: "Anitha T.",
     role: "Owner, CraftBazaar",
-    division: "Favor Media",
+    division: "Favor Apps",
   },
 ]
 

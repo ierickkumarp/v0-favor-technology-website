@@ -18,10 +18,10 @@ const allStudies = [
     tag: "App Development",
   },
   {
-    problem: "Weak Brand Image & Low Investor Trust",
-    strategy: "Brand Identity Redesign + Corporate Video + Social Strategy",
-    result: "Secured $500K Funding",
-    tag: "Media & Branding",
+    problem: "E-Commerce Store With Low ROAS & Cart Abandonment",
+    strategy: "Google Shopping Optimization + Dynamic Retargeting + WhatsApp Cart Recovery",
+    result: "5X ROAS in 90 Days",
+    tag: "Digital Marketing",
   },
 ]
 

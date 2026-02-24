@@ -6,7 +6,6 @@ import Link from "next/link"
 import {
   Smartphone,
   BarChart3,
-  Film,
   ArrowRight,
   Code2,
   Globe,
@@ -18,10 +17,6 @@ import {
   Share2,
   Bot,
   LineChart,
-  Palette,
-  Camera,
-  Video,
-  Calendar,
   MessageSquare,
 } from "lucide-react"
 
@@ -29,52 +24,42 @@ const divisions = [
   {
     icon: Smartphone,
     title: "Favor Apps",
-    tagline: "Smart Apps. Smarter Business.",
+    tagline: "High-Performance Web Engineering",
+    description:
+      "We build production-grade web applications, SaaS platforms, admin dashboards, and custom CRM systems using modern high-code frameworks.",
     services: [
-      { icon: Code2, label: "Custom Mobile Apps" },
-      { icon: Globe, label: "Web App Development" },
-      { icon: Cloud, label: "SaaS Platforms" },
-      { icon: Cpu, label: "AI Integrations" },
+      { icon: Code2, label: "Business Websites & Web Apps" },
+      { icon: Cloud, label: "SaaS Development" },
+      { icon: Globe, label: "Admin Dashboards & CRMs" },
+      { icon: Cpu, label: "API Integrations & Automation" },
       { icon: ShieldCheck, label: "Secure & Scalable Architecture" },
     ],
-    cta: "Learn More",
+    cta: "Explore Apps",
     href: "/services/apps",
     accent: "#1565C0",
   },
   {
     icon: BarChart3,
     title: "Favor Digital Marketing",
-    tagline: "Your Digital Growth Partner",
+    tagline: "Omnichannel Performance Marketing",
+    description:
+      "From Meta Ads to Google Shopping, LinkedIn to WhatsApp Automation -- we run full-funnel campaigns across every platform that drives revenue.",
     services: [
-      { icon: Search, label: "SEO Optimization" },
-      { icon: Megaphone, label: "Google & Meta Ads" },
-      { icon: Share2, label: "Social Media Marketing" },
-      { icon: Bot, label: "Automation Funnels" },
-      { icon: LineChart, label: "Analytics & Reporting" },
+      { icon: Search, label: "SEO & Google Ads" },
+      { icon: Megaphone, label: "Meta, LinkedIn & Bing Ads" },
+      { icon: Share2, label: "Google Shopping & Display" },
+      { icon: Bot, label: "AI & CRM Automation" },
+      { icon: MessageSquare, label: "Email & WhatsApp Automation" },
+      { icon: LineChart, label: "CRO & Analytics" },
     ],
     stats: [
       { value: "200+", label: "Campaigns" },
-      { value: "150%", label: "Avg ROI" },
-      { value: "15+", label: "Keywords Ranked" },
+      { value: "3-6X", label: "Avg ROAS" },
+      { value: "13+", label: "Platforms" },
     ],
-    cta: "Learn More",
+    cta: "Explore Marketing",
     href: "/services/marketing",
     accent: "#2196F3",
-  },
-  {
-    icon: Film,
-    title: "Favor Media",
-    tagline: "Crafting Stories That Stick",
-    services: [
-      { icon: Palette, label: "Brand Identity" },
-      { icon: Video, label: "Ad Films" },
-      { icon: Camera, label: "Photography" },
-      { icon: Calendar, label: "Event Coverage" },
-      { icon: MessageSquare, label: "Social Content" },
-    ],
-    cta: "Learn More",
-    href: "/services/media",
-    accent: "#80D8FF",
   },
 ]
 
@@ -84,10 +69,9 @@ export function Divisions() {
 
   return (
     <section id="services" className="relative py-28 md:py-36">
-      {/* Background glow */}
       <div className="animate-glow-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[150px]" />
 
-      <div ref={ref} className="relative mx-auto max-w-7xl px-6">
+      <div ref={ref} className="relative mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-accent/50" />
@@ -97,15 +81,15 @@ export function Divisions() {
             <div className="h-px w-12 bg-accent/50" />
           </div>
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
-            Three Divisions, One Vision
+            Two Divisions, One Growth System
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
-            Each arm of Favor is built to deliver excellence. Together, they
-            create an unmatched growth ecosystem.
+            Favor Apps builds the technology. Favor Digital Marketing drives the
+            traffic. Together, they create a complete growth engine.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {divisions.map((div, i) => (
             <div
               key={div.title}
@@ -117,7 +101,7 @@ export function Divisions() {
               style={{ transitionDelay: `${i * 150}ms` }}
             >
               {/* Header */}
-              <div className="mb-6">
+              <div className="mb-4">
                 <div
                   className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl"
                   style={{ backgroundColor: `${div.accent}20` }}
@@ -127,8 +111,14 @@ export function Divisions() {
                 <h3 className="mb-1 text-xl font-bold text-foreground">
                   {div.title}
                 </h3>
-                <p className="text-sm text-accent">{div.tagline}</p>
+                <p className="text-sm font-medium text-accent">
+                  {div.tagline}
+                </p>
               </div>
+
+              <p className="mb-5 text-sm text-muted-foreground leading-relaxed">
+                {div.description}
+              </p>
 
               {/* Services */}
               <div className="mb-6 flex flex-1 flex-col gap-3">
@@ -137,13 +127,16 @@ export function Divisions() {
                     key={service.label}
                     className="flex items-center gap-3 text-sm text-muted-foreground"
                   >
-                    <service.icon size={14} className="shrink-0 text-accent/70" />
+                    <service.icon
+                      size={14}
+                      className="shrink-0 text-accent/70"
+                    />
                     {service.label}
                   </div>
                 ))}
               </div>
 
-              {/* Stats (only for digital marketing) */}
+              {/* Stats */}
               {"stats" in div && div.stats && (
                 <div className="mb-6 grid grid-cols-3 gap-3">
                   {div.stats.map((stat) => (

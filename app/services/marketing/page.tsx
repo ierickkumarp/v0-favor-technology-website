@@ -6,9 +6,9 @@ import { Testimonials } from "@/components/testimonials"
 import { CtaBanner } from "@/components/cta-banner"
 
 export const metadata: Metadata = {
-  title: "Favor Digital Marketing — Your Digital Growth Partner",
+  title: "Favor Digital Marketing — Omnichannel Performance Marketing",
   description:
-    "SEO, Google & Meta Ads, Social Media Marketing, Content Marketing, Email Automation, and Analytics. Drive measurable growth with Favor.",
+    "Full-funnel performance marketing across Meta, Google, LinkedIn, Bing, SEO, Email & WhatsApp Automation, CRM, and AI workflows. Measurable ROI guaranteed.",
 }
 
 export default function MarketingPage() {
@@ -16,7 +16,7 @@ export default function MarketingPage() {
     <>
       <PageHero
         title="Favor Digital Marketing"
-        tagline="Your Digital Growth Partner. We empower businesses of all sizes to thrive online through data-driven digital marketing."
+        tagline="Omnichannel performance marketing. We run full-funnel campaigns across every platform that drives revenue -- from Meta Ads to WhatsApp Automation."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services/marketing" },
@@ -27,9 +27,10 @@ export default function MarketingPage() {
       <CaseStudies filter="Digital Marketing" />
       <Testimonials filter="Favor Digital Marketing" />
       <CtaBanner
-        heading="Ready to Scale Your Growth?"
-        description="Let our data-driven team craft a marketing strategy that delivers measurable ROI."
-        ctaText="Get Free Consultation"
+        heading="Ready to Scale Your Revenue?"
+        description="Get a free performance audit and a custom growth strategy tailored to your budget and goals."
+        ctaText="Get Free Audit"
+        ctaHref="/pricing"
       />
     </>
   )

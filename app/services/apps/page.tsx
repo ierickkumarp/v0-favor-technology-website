@@ -5,9 +5,9 @@ import { Testimonials } from "@/components/testimonials"
 import { CtaBanner } from "@/components/cta-banner"
 
 export const metadata: Metadata = {
-  title: "Favor Apps — Smart Apps. Smarter Business.",
+  title: "Favor Apps — High-Performance Web Engineering",
   description:
-    "Custom mobile app development, web apps, SaaS platforms, AI integrations, and secure scalable architecture. Build your app with Favor.",
+    "Production-grade web applications, SaaS platforms, admin dashboards, CRM systems, and API integrations built with modern high-code frameworks.",
 }
 
 export default function AppsPage() {
@@ -15,7 +15,7 @@ export default function AppsPage() {
     <>
       <PageHero
         title="Favor Apps"
-        tagline="Smart Apps. Smarter Business. We design and develop custom mobile and web applications that help businesses automate, engage, and grow."
+        tagline="High-performance web engineering. We build production-grade web applications, SaaS platforms, and custom business systems using modern frameworks."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services/apps" },
@@ -25,9 +25,9 @@ export default function AppsPage() {
       <AppsContent />
       <Testimonials filter="Favor Apps" />
       <CtaBanner
-        heading="Ready to Build Your App?"
-        description="From concept to launch, our expert team delivers scalable, secure, and user-friendly applications."
-        ctaText="Build Your App Today"
+        heading="Ready to Build Your Platform?"
+        description="From concept to production, our engineering team delivers scalable, secure, and high-performance web applications."
+        ctaText="Start Your Project"
       />
     </>
   )

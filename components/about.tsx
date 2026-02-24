@@ -26,14 +26,14 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
-              A Technology Powered{" "}
-              <span className="text-accent">Growth Ecosystem</span>
+              Your Technology-Powered{" "}
+              <span className="text-accent">Growth Partner</span>
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed md:text-lg">
-              Favor is your all-in-one innovation hub. We build scalable apps,
-              drive measurable digital growth, and craft powerful brand media —
-              all under one roof. With Favor Apps, Favor Digital Marketing, and
-              Favor Media, we help businesses thrive in the modern world.
+              Favor engineers growth through systems, not shortcuts. We combine
+              high-code web development with omnichannel performance marketing
+              and AI-powered automation to build businesses that scale
+              predictably and profitably.
             </p>
           </div>
 
@@ -41,18 +41,18 @@ export function About() {
             {[
               {
                 icon: Layers,
-                title: "Full-Stack Solutions",
-                desc: "From ideation to launch, we handle every layer of your digital presence.",
+                title: "High-Code Engineering",
+                desc: "Production-grade web applications built with Next.js, Node.js, and modern architecture.",
               },
               {
                 icon: TrendingUp,
-                title: "Data-Driven Growth",
-                desc: "Every strategy is backed by analytics, ensuring measurable results.",
+                title: "Performance Marketing",
+                desc: "Full-funnel campaigns across Meta, Google, LinkedIn, and more -- optimized for ROAS.",
               },
               {
                 icon: Zap,
-                title: "AI-Powered Innovation",
-                desc: "We integrate cutting-edge AI into apps, marketing, and automation.",
+                title: "AI Automation",
+                desc: "Workflow automation using Zapier, Make, n8n, and custom AI integrations.",
               },
             ].map((item) => (
               <div

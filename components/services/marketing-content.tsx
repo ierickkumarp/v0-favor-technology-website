@@ -6,58 +6,111 @@ import {
   Search,
   Megaphone,
   Share2,
-  FileText,
+  ShoppingCart,
   Mail,
+  MessageSquare,
   BarChart3,
+  Bot,
+  Globe,
+  Target,
+  RefreshCcw,
+  Briefcase,
   CheckCircle2,
 } from "lucide-react"
 
 const services = [
   {
-    icon: Search,
-    title: "SEO Optimization",
-    desc: "Dominate search results with data-driven SEO strategies that boost organic traffic and visibility.",
-  },
-  {
     icon: Megaphone,
-    title: "Google & Meta Ads",
-    desc: "High-performance paid campaigns across Google, Facebook, and Instagram for maximum ROI.",
+    title: "Meta Ads (Facebook + Instagram)",
+    desc: "Full-funnel campaigns with creative testing, audience segmentation, and dynamic retargeting.",
   },
   {
-    icon: Share2,
-    title: "Social Media Marketing",
-    desc: "Strategic social media management that builds communities and drives brand awareness.",
+    icon: Search,
+    title: "Google Search & Display Ads",
+    desc: "High-intent search campaigns and display network reach for maximum visibility and conversions.",
   },
   {
-    icon: FileText,
-    title: "Content Marketing",
-    desc: "Compelling content strategies that educate, engage, and convert your target audience.",
+    icon: ShoppingCart,
+    title: "Google Shopping",
+    desc: "Product feed optimization, shopping campaign management, and dynamic remarketing for e-commerce.",
+  },
+  {
+    icon: Briefcase,
+    title: "LinkedIn Ads",
+    desc: "B2B lead generation with InMail campaigns, ABM targeting, and decision-maker outreach.",
+  },
+  {
+    icon: Globe,
+    title: "Bing Ads",
+    desc: "Untapped search audiences on Microsoft Bing with lower CPCs and high-quality traffic.",
+  },
+  {
+    icon: Search,
+    title: "SEO (Full-Service)",
+    desc: "Technical SEO, on-page optimization, content strategy, link building, and local SEO.",
   },
   {
     icon: Mail,
-    title: "Email Marketing Automation",
-    desc: "Automated email funnels that nurture leads and drive repeat business with personalization.",
+    title: "Email Marketing & Automation",
+    desc: "Drip sequences, newsletters, segmentation, and automated nurture funnels that convert.",
+  },
+  {
+    icon: MessageSquare,
+    title: "WhatsApp Automation",
+    desc: "Automated WhatsApp flows for lead follow-up, cart recovery, appointment reminders, and support.",
+  },
+  {
+    icon: Bot,
+    title: "AI & CRM Automation",
+    desc: "Zapier, Make, n8n workflows connecting your CRM, ads, email, and WhatsApp into one system.",
+  },
+  {
+    icon: Target,
+    title: "Conversion Rate Optimization",
+    desc: "A/B testing, heatmap analysis, funnel optimization, and landing page experimentation.",
+  },
+  {
+    icon: RefreshCcw,
+    title: "Retargeting & Remarketing",
+    desc: "Cross-platform retargeting to bring back visitors and convert them into paying customers.",
   },
   {
     icon: BarChart3,
     title: "Analytics & Reporting",
-    desc: "Transparent reporting with actionable insights to continuously optimize your campaigns.",
+    desc: "Custom GA4 setups, server-side tracking, live dashboards, and weekly strategy reports.",
   },
 ]
 
 const stats = [
-  { value: 200, suffix: "+", label: "Campaigns Delivered" },
-  { value: 150, suffix: "%", label: "Avg ROI Growth" },
-  { value: 15, suffix: "+", label: "Keywords Ranked" },
-  { value: 50, suffix: "+", label: "Happy Clients" },
+  { value: 200, suffix: "+", label: "Campaigns Managed" },
+  { value: 13, suffix: "+", label: "Platforms Covered" },
+  { value: 6, suffix: "X", label: "Avg ROAS" },
+  { value: 50, suffix: "+", label: "Active Clients" },
+]
+
+const platforms = [
+  "Meta Ads",
+  "Google Search",
+  "Google Display",
+  "Google Shopping",
+  "LinkedIn Ads",
+  "Bing Ads",
+  "SEO",
+  "Email Marketing",
+  "WhatsApp Automation",
+  "CRM Automation",
+  "Retargeting",
+  "CRO",
+  "AI Workflows",
 ]
 
 const whyChoose = [
-  "Data-driven strategies backed by real analytics",
-  "Affordable pricing with transparent reporting",
-  "Experienced team across all digital channels",
-  "Result-focused approach tied to business metrics",
-  "Dedicated account manager for every client",
+  "Full-funnel strategy across 13+ platforms -- not just one channel",
+  "ROAS-first approach: every rupee is tracked and optimized",
+  "Complete automation stack: CRM, email, WhatsApp, and AI workflows",
+  "Transparent reporting with full ad account access",
+  "Dedicated account manager + weekly strategy calls",
+  "No long-term lock-in after minimum contract period",
 ]
 
 function AnimatedCounter({
@@ -111,16 +164,16 @@ export function MarketingContent() {
             <div className="mb-4 flex items-center justify-center gap-3">
               <div className="h-px w-12 bg-accent/50" />
               <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-                Our Services
+                Our Platforms
               </span>
               <div className="h-px w-12 bg-accent/50" />
             </div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-              End-to-End Digital Marketing
+              Omnichannel Performance Marketing
             </h2>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
-              From SEO and social media to performance marketing and content
-              creation, we offer comprehensive digital marketing solutions.
+              From paid ads to automation pipelines, we cover every channel that
+              drives revenue -- managed by a dedicated team obsessed with ROAS.
             </p>
           </div>
 
@@ -133,7 +186,7 @@ export function MarketingContent() {
                     ? "translate-y-0 opacity-100"
                     : "translate-y-12 opacity-0"
                 }`}
-                style={{ transitionDelay: `${i * 100}ms` }}
+                style={{ transitionDelay: `${i * 70}ms` }}
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20">
                   <service.icon size={24} className="text-accent" />
@@ -145,6 +198,22 @@ export function MarketingContent() {
                   {service.desc}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Tags */}
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {platforms.map((p) => (
+              <span
+                key={p}
+                className="rounded-full border border-border bg-secondary/40 px-4 py-2 text-xs font-medium text-foreground"
+              >
+                {p}
+              </span>
             ))}
           </div>
         </div>

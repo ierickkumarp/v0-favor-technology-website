@@ -15,9 +15,9 @@ const navLinks = [
     children: [
       { label: "Favor Apps", href: "/services/apps" },
       { label: "Favor Digital Marketing", href: "/services/marketing" },
-      { label: "Favor Media", href: "/services/media" },
     ],
   },
+  { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ]
 
@@ -137,7 +137,7 @@ export function Navbar() {
             href="/contact"
             className="rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-accent hover:shadow-[0_0_20px_rgba(33,150,243,0.4)]"
           >
-            Get Strategy Call
+            Book Strategy Call
           </Link>
         </div>
 
@@ -210,7 +210,7 @@ export function Navbar() {
               href="/contact"
               className="mt-2 rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-primary-foreground"
             >
-              Get Strategy Call
+              Book Strategy Call
             </Link>
           </div>
         </div>
