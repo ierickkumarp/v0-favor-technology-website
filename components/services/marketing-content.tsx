@@ -158,9 +158,9 @@ export function MarketingContent() {
   return (
     <div ref={ref} className="relative">
       {/* Services */}
-      <section className="py-28 md:py-36">
+      <section className="py-32 md:py-40">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-16 text-center">
+          <div className="mb-20 text-center">
             <div className="mb-4 flex items-center justify-center gap-3">
               <div className="h-px w-12 bg-accent/50" />
               <span className="text-xs font-semibold tracking-widest text-accent uppercase">
@@ -168,7 +168,7 @@ export function MarketingContent() {
               </span>
               <div className="h-px w-12 bg-accent/50" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
+            <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
               Omnichannel Performance Marketing
             </h2>
             <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
@@ -220,7 +220,7 @@ export function MarketingContent() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 md:py-28">
+      <section className="py-24 md:py-32">
         <div ref={statsRef} className="mx-auto max-w-5xl px-6">
           <div className="glass-card rounded-2xl p-10">
             <div className="grid gap-8 md:grid-cols-4">
@@ -242,7 +242,7 @@ export function MarketingContent() {
       </section>
 
       {/* Why Choose */}
-      <section className="py-20 md:py-28">
+      <section className="py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6">
           <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-3">
@@ -252,7 +252,7 @@ export function MarketingContent() {
               </span>
               <div className="h-px w-12 bg-accent/50" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
+            <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
               Why Choose Us
             </h2>
           </div>

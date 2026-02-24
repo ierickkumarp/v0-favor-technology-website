@@ -31,7 +31,7 @@ export function CtaBanner({
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+        <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
           {heading}
         </h2>
         <p className="mx-auto mb-8 max-w-xl text-base text-muted-foreground leading-relaxed md:text-lg">

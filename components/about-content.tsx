@@ -49,7 +49,7 @@ export function AboutContent() {
   const isInView = useInView(ref, { threshold: 0.1 })
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-32 md:py-40">
       <div
         ref={ref}
         className={`mx-auto max-w-6xl px-6 transition-all duration-700 ${
@@ -106,7 +106,7 @@ export function AboutContent() {
               </span>
               <div className="h-px w-12 bg-accent/50" />
             </div>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
+            <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
               Our Core Principles
             </h2>
           </div>

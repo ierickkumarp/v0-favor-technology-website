@@ -1,6 +1,6 @@
 "use client"
 
-import { useInView } from "@/hooks/use-in-view"
+import { useInViewRef } from "@/hooks/use-in-view"
 import {
   ShieldCheck,
   RefreshCcw,
@@ -50,17 +50,17 @@ const policies = [
 ]
 
 export function Policies() {
-  const { ref, isInView } = useInView()
+  const { ref, isInView } = useInViewRef()
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-32 md:py-40">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/4 blur-[100px]" />
       </div>
 
       <div ref={ref} className="relative mx-auto max-w-6xl px-6">
         <div
-          className={`mb-16 text-center transition-all duration-700 ${
+          className={`mb-20 text-center transition-all duration-700 ${
             isInView ? "animate-fade-in-up" : "opacity-0 translate-y-8"
           }`}
         >
@@ -71,7 +71,7 @@ export function Policies() {
             </span>
             <div className="h-px w-12 bg-accent/50" />
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+          <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
             Built on Trust & Transparency
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">

@@ -21,14 +21,14 @@ export function WhyChoose() {
   const isInView = useInView(ref, { threshold: 0.2 })
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-32 md:py-40">
       <div
         ref={ref}
         className={`mx-auto max-w-4xl px-6 transition-all duration-700 ${
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <div className="mb-16 text-center">
+        <div className="mb-20 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-accent/50" />
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">
@@ -36,7 +36,7 @@ export function WhyChoose() {
             </span>
             <div className="h-px w-12 bg-accent/50" />
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+          <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
             Why Choose Favor?
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
