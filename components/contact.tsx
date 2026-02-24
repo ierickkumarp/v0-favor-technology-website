@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react"
 import { useInView } from "@/hooks/use-in-view"
-import { Phone, Send } from "lucide-react"
+import { Mail, Phone, Send } from "lucide-react"
 
 const services = [
   "Web App Development",
@@ -25,7 +25,7 @@ export function Contact() {
   }
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-32 md:py-40">
       <div className="animate-glow-pulse absolute left-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[150px]" />
 
       <div
@@ -154,6 +154,21 @@ export function Contact() {
           <div className="flex flex-col gap-6 lg:col-span-2">
             <div className="glass-card glass-card-hover rounded-2xl p-7 transition-all duration-300">
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/20">
+                <Mail size={18} className="text-accent" />
+              </div>
+              <h3 className="mb-1 text-sm font-semibold text-foreground">
+                Email Us
+              </h3>
+              <a
+                href="mailto:contact.sales@favorad.in"
+                className="text-sm text-accent hover:underline"
+              >
+                contact.sales@favorad.in
+              </a>
+            </div>
+
+            <div className="glass-card glass-card-hover rounded-2xl p-7 transition-all duration-300">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/20">
                 <Phone size={18} className="text-accent" />
               </div>
               <h3 className="mb-1 text-sm font-semibold text-foreground">
@@ -171,11 +186,11 @@ export function Contact() {
 
             <div className="glass-card rounded-2xl p-7">
               <h3 className="mb-3 text-sm font-semibold text-foreground">
-                Quick Response
+                Response Time
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                We typically respond within 2 hours during business hours. For
-                urgent matters, reach us directly on WhatsApp.
+                We respond within 24 business hours. For urgent matters, reach us
+                directly on WhatsApp.
               </p>
             </div>
           </div>

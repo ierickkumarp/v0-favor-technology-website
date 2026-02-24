@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
+import { GrowthPlanBuilder } from "@/components/growth-plan-builder"
 import { PricingCards } from "@/components/pricing-cards"
 import { CtaBanner } from "@/components/cta-banner"
 
@@ -20,6 +21,7 @@ export default function PricingPage() {
           { label: "Pricing" },
         ]}
       />
+      <GrowthPlanBuilder />
       <PricingCards />
       <CtaBanner
         heading="Need a Custom Plan?"

@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Divisions } from "@/components/divisions"
+import { WhyFavor } from "@/components/why-favor"
 import { GrowthPartners } from "@/components/growth-partners"
 import { AutomationTools } from "@/components/automation-tools"
 import { Testimonials } from "@/components/testimonials"
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Divisions />
+      <WhyFavor />
       <GrowthPartners />
       <AutomationTools />
       <Testimonials />

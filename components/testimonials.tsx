@@ -2,70 +2,88 @@
 
 import { useRef } from "react"
 import { useInView } from "@/hooks/use-in-view"
-import { Star } from "lucide-react"
+import { Star, ExternalLink } from "lucide-react"
 
 const allTestimonials = [
   {
-    quote:
-      "From wireframe to launch, Favor Apps made the process smooth and delivered on time.",
     name: "Ramesh S.",
-    role: "CEO, TechVentures",
+    company: "TechVentures",
+    website: "techventures.in",
+    industry: "SaaS / Technology",
+    service: "Full-Stack Web Application",
+    result: "Launched MVP in 8 weeks, onboarded 500+ users in month one.",
     division: "Favor Apps",
   },
   {
-    quote:
-      "Traffic & leads doubled in 60 days! Their strategy was data-driven and results-focused.",
     name: "Meena J.",
-    role: "Marketing Head, RetailPro",
+    company: "RetailPro",
+    website: "retailpro.co.in",
+    industry: "E-Commerce / Retail",
+    service: "Meta + Google Performance Marketing",
+    result: "2X traffic and 3.8X ROAS within 60 days.",
     division: "Favor Digital Marketing",
   },
   {
-    quote:
-      "Their automation setup saved us 20+ hours a week. CRM, emails, and WhatsApp all synced perfectly.",
     name: "Sundar K.",
-    role: "Founder, GreenPath",
+    company: "GreenPath",
+    website: "greenpath.org",
+    industry: "Sustainability / NGO",
+    service: "CRM + WhatsApp Automation",
+    result: "Saved 20+ hours/week, 40% increase in donor engagement.",
     division: "Favor Digital Marketing",
   },
   {
-    quote:
-      "They delivered a robust ERP tailored for our operations. Exceptional attention to detail.",
     name: "Lavanya P.",
-    role: "COO, LogiFlow",
+    company: "LogiFlow",
+    website: "logiflow.in",
+    industry: "Logistics / Operations",
+    service: "Custom ERP Web App",
+    result: "Reduced manual processes by 70%, live fleet tracking dashboard.",
     division: "Favor Apps",
   },
   {
-    quote:
-      "Google Ads gave 8X ROI. We have never seen this kind of return from any agency before.",
     name: "Karthik V.",
-    role: "Director, FoodKart",
+    company: "FoodKart",
+    website: "foodkart.com",
+    industry: "Food & Beverage / D2C",
+    service: "Google Ads + Shopping Campaigns",
+    result: "8X ROI on ad spend, 150% increase in monthly orders.",
     division: "Favor Digital Marketing",
   },
   {
-    quote:
-      "Full-funnel setup across Meta and Google Shopping got us 5X ROAS within the first quarter.",
     name: "Rajeev D.",
-    role: "VP, IndustryMax",
+    company: "IndustryMax",
+    website: "industrymax.co",
+    industry: "B2B / Manufacturing",
+    service: "Full-Funnel Meta + Google + LinkedIn",
+    result: "5X ROAS in 90 days, 300+ qualified leads per month.",
     division: "Favor Digital Marketing",
   },
   {
-    quote:
-      "AI-integrated app delivered fast and clean. Truly innovative team.",
     name: "Vignesh M.",
-    role: "CTO, NexGen Solutions",
+    company: "NexGen Solutions",
+    website: "nexgensolutions.io",
+    industry: "AI / Deep Tech",
+    service: "AI-Integrated Web Platform",
+    result: "Production-ready in 10 weeks, processing 50K+ API calls/day.",
     division: "Favor Apps",
   },
   {
-    quote:
-      "Now ranking for 15+ keywords. Our organic visibility skyrocketed.",
     name: "Priya A.",
-    role: "Founder, StyleHouse",
+    company: "StyleHouse",
+    website: "stylehouse.in",
+    industry: "Fashion / D2C",
+    service: "SEO + Content Marketing",
+    result: "Ranking for 15+ keywords, 200% organic traffic growth in 4 months.",
     division: "Favor Digital Marketing",
   },
   {
-    quote:
-      "Our SaaS admin dashboard handles 10K+ users daily without a hitch. Truly robust engineering.",
     name: "Anitha T.",
-    role: "Owner, CraftBazaar",
+    company: "CraftBazaar",
+    website: "craftbazaar.com",
+    industry: "Marketplace / E-Commerce",
+    service: "SaaS Admin Dashboard",
+    result: "Handles 10K+ users daily, 99.9% uptime since launch.",
     division: "Favor Apps",
   },
 ]
@@ -83,22 +101,22 @@ export function Testimonials({ filter }: TestimonialsProps) {
     : allTestimonials
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-32 md:py-40">
       <div ref={ref} className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
+        <div className="mb-20 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-accent/50" />
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-              Testimonials
+              Client Results
             </span>
             <div className="h-px w-12 bg-accent/50" />
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
-            What Our Clients Say
+          <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+            Real Clients. Measurable Results.
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
-            Trusted by businesses across industries to deliver results that
-            matter.
+            Every engagement is built around clear deliverables and measurable
+            outcomes.
           </p>
         </div>
 
@@ -114,7 +132,7 @@ export function Testimonials({ filter }: TestimonialsProps) {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Stars */}
-              <div className="mb-4 flex gap-1">
+              <div className="mb-5 flex gap-1">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Star
                     key={j}
@@ -124,13 +142,38 @@ export function Testimonials({ filter }: TestimonialsProps) {
                 ))}
               </div>
 
-              {/* Quote */}
-              <p className="mb-6 flex-1 text-sm text-foreground/90 leading-relaxed">
-                {`"${t.quote}"`}
+              {/* Result highlight */}
+              <p className="mb-5 text-sm font-semibold text-foreground leading-relaxed">
+                {`"${t.result}"`}
               </p>
 
+              {/* Structured details */}
+              <div className="mb-5 flex flex-1 flex-col gap-2.5">
+                <div className="flex items-start gap-2">
+                  <span className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase w-20 shrink-0 pt-0.5">
+                    Industry
+                  </span>
+                  <span className="text-sm text-foreground/80">{t.industry}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase w-20 shrink-0 pt-0.5">
+                    Service
+                  </span>
+                  <span className="text-sm text-foreground/80">{t.service}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase w-20 shrink-0 pt-0.5">
+                    Website
+                  </span>
+                  <span className="flex items-center gap-1 text-sm text-accent">
+                    {t.website}
+                    <ExternalLink size={11} className="opacity-60" />
+                  </span>
+                </div>
+              </div>
+
               {/* Author */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 border-t border-border/50 pt-5">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-sm font-bold text-accent">
                   {t.name.charAt(0)}
                 </div>
@@ -138,7 +181,7 @@ export function Testimonials({ filter }: TestimonialsProps) {
                   <p className="text-sm font-semibold text-foreground">
                     {t.name}
                   </p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
+                  <p className="text-xs text-muted-foreground">{t.company}</p>
                 </div>
               </div>
 
