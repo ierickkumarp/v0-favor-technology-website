@@ -55,7 +55,7 @@ export function GrowthPlanBuilder() {
         }`}
       >
         {/* Header */}
-        <div className="mb-12 text-center">
+        <div className="mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-accent/50" />
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">
@@ -64,11 +64,10 @@ export function GrowthPlanBuilder() {
             <div className="h-px w-12 bg-accent/50" />
           </div>
           <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
-            Build Your Custom Growth Plan
+            Build Your Plan
           </h2>
           <p className="mx-auto max-w-xl text-base text-muted-foreground leading-relaxed">
-            Select the services you need. Get an instant estimate. Then request a
-            tailored proposal from our team.
+            Mix and match services. See your estimated investment instantly.
           </p>
         </div>
 

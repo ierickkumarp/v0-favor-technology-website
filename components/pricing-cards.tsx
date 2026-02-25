@@ -21,7 +21,15 @@ export function PricingCards() {
         <div className="animate-glow-pulse absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[150px]" />
       </div>
 
-      <div ref={ref} className="relative mx-auto max-w-7xl px-6">
+      <div ref={ref} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-20 text-center">
+          <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
+            Simple, Transparent Pricing
+          </h2>
+          <p className="mx-auto max-w-2xl text-base text-muted-foreground leading-relaxed">
+            Choose a plan that scales with your business. All plans include strategy, execution, and monthly reporting.
+          </p>
+        </div>
         <div className="grid gap-8 lg:grid-cols-2">
           {plans.map((plan, i) => {
             const isPopular = plan.slug === "scale"

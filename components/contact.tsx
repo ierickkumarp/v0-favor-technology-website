@@ -30,11 +30,11 @@ export function Contact() {
 
       <div
         ref={ref}
-        className={`relative mx-auto max-w-6xl px-6 transition-all duration-700 ${
+        className={`relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <div className="grid gap-12 lg:grid-cols-5">
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-5">
           {/* Form */}
           <div className="glass-card rounded-2xl p-8 lg:col-span-3">
             {submitted ? (

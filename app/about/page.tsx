@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { AboutContent } from "@/components/about-content"
+import { IndustriesServed } from "@/components/industries-served"
 import { Policies } from "@/components/policies"
 import { CtaBanner } from "@/components/cta-banner"
 
@@ -22,6 +23,7 @@ export default function AboutPage() {
         ]}
       />
       <AboutContent />
+      <IndustriesServed />
       <Policies />
       <CtaBanner
         heading="Partner With Us"
