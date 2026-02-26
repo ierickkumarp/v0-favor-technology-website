@@ -60,9 +60,9 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border py-3"
+          ? "bg-background border-b border-border/50 py-3 shadow-sm"
           : "bg-transparent py-4"
       }`}
     >
@@ -90,10 +90,10 @@ export function Navbar() {
               <div key={link.label} className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className={`flex items-center gap-1 text-sm transition-colors ${
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors ${
                     isActive(link.href)
-                      ? "font-medium text-accent"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-accent"
+                      : "text-foreground/70 hover:text-foreground"
                   }`}
                 >
                   {link.label}
@@ -126,10 +126,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors ${
+                className={`text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? "font-medium text-accent"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-accent"
+                    : "text-foreground/70 hover:text-foreground"
                 }`}
               >
                 {link.label}

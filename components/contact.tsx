@@ -4,14 +4,13 @@ import { useRef, useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import { useInView } from "@/hooks/use-in-view"
 import { Mail, Phone, Send } from "lucide-react"
-import { getPlanBySlug } from "@/lib/plans-data"
 
 const services = [
-  "Growth Starter (Marketing)",
-  "Scale Pro (Marketing)",
-  "Dominate (Marketing)",
-  "E-Commerce Performance",
-  "Custom Web Development",
+  { slug: "growth", name: "Growth Starter (Marketing)" },
+  { slug: "scale", name: "Scale Pro (Marketing)" },
+  { slug: "dominate", name: "Dominate (Marketing)" },
+  { slug: "ecommerce", name: "E-Commerce Performance" },
+  { slug: "custom", name: "Custom Web Development" },
 ]
 
 export function Contact() {
@@ -20,13 +19,15 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const searchParams = useSearchParams()
   const [selectedPlan, setSelectedPlan] = useState("")
+  const [planLocked, setPlanLocked] = useState(false)
 
   useEffect(() => {
     const planParam = searchParams.get("plan")
     if (planParam) {
-      const plan = getPlanBySlug(planParam)
-      if (plan) {
-        setSelectedPlan(plan.name)
+      const matchedService = services.find((s) => s.slug === planParam)
+      if (matchedService) {
+        setSelectedPlan(matchedService.name)
+        setPlanLocked(true)
       }
     }
   }, [searchParams])
@@ -38,7 +39,7 @@ export function Contact() {
   }
 
   return (
-    <section className="relative py-32 md:py-40">
+    <section className="relative py-20 md:py-28">
       <div className="animate-glow-pulse absolute left-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[150px]" />
 
       <div
@@ -125,17 +126,17 @@ export function Contact() {
                     required
                     value={selectedPlan}
                     onChange={(e) => setSelectedPlan(e.target.value)}
-                    disabled={!!searchParams.get("plan")}
+                    disabled={planLocked}
                     className={`w-full rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground focus:border-accent/50 focus:outline-none focus:ring-1 focus:ring-accent/30 ${
-                      searchParams.get("plan") ? "opacity-75 cursor-not-allowed" : ""
+                      planLocked ? "opacity-75 cursor-not-allowed" : ""
                     }`}
                   >
                     <option value="" className="bg-background text-muted-foreground">
                       Select a service
                     </option>
                     {services.map((s) => (
-                      <option key={s} value={s} className="bg-background text-foreground">
-                        {s}
+                      <option key={s.slug} value={s.name} className="bg-background text-foreground">
+                        {s.name}
                       </option>
                     ))}
                   </select>

@@ -58,7 +58,7 @@ export function ExecutionFramework() {
   const isInView = useInView(ref, { threshold: 0.1 })
 
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="relative py-20 md:py-28">
       <div className="absolute inset-0 overflow-hidden">
         <div className="animate-glow-pulse absolute right-1/4 top-1/3 h-[400px] w-[400px] rounded-full bg-accent/5 blur-[150px]" />
       </div>
