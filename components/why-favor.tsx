@@ -55,9 +55,9 @@ export function WhyFavor() {
   const isInView = useInView(ref, { threshold: 0.15 })
 
   return (
-    <section className="relative py-32 md:py-40">
+    <section className="relative py-14 md:py-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="animate-glow-pulse absolute left-1/3 top-1/3 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[150px]" />
+        <div className="animate-glow-pulse absolute left-1/3 top-1/3 h-[300px] w-[300px] rounded-full bg-primary/3 blur-[100px]" />
       </div>
 
       <div
@@ -66,14 +66,10 @@ export function WhyFavor() {
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <div className="mb-20 text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <div className="h-px w-12 bg-accent/50" />
-            <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-              The Favor Difference
-            </span>
-            <div className="h-px w-12 bg-accent/50" />
-          </div>
+        <div className="mb-12 text-center">
+          <span className="mb-3 inline-block text-xs font-semibold tracking-widest text-accent uppercase">
+            The Favor Difference
+          </span>
           <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
             Why Favor
           </h2>

@@ -58,9 +58,9 @@ export function ExecutionFramework() {
   const isInView = useInView(ref, { threshold: 0.1 })
 
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-14 md:py-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="animate-glow-pulse absolute right-1/4 top-1/3 h-[400px] w-[400px] rounded-full bg-accent/5 blur-[150px]" />
+        <div className="animate-glow-pulse absolute right-1/4 top-1/3 h-[300px] w-[300px] rounded-full bg-accent/3 blur-[100px]" />
       </div>
 
       <div
@@ -70,13 +70,9 @@ export function ExecutionFramework() {
         }`}
       >
         <div className="mb-16 text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <div className="h-px w-12 bg-accent/50" />
-            <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-              Our Process
-            </span>
-            <div className="h-px w-12 bg-accent/50" />
-          </div>
+          <span className="mb-3 inline-block text-xs font-semibold tracking-widest text-accent uppercase">
+            Our Process
+          </span>
           <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
             How We Execute
           </h2>

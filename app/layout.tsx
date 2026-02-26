@@ -58,7 +58,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased">
         <Navbar />
-        <main className="relative min-h-screen overflow-x-hidden pt-16 md:pt-[72px]">
+        <main className="relative min-h-screen overflow-x-hidden pt-14 md:pt-16">
           {children}
         </main>
         <Footer />

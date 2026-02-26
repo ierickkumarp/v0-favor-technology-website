@@ -43,9 +43,9 @@ export function GrowthPlanBuilder() {
     .reduce((sum, s) => sum + s.estimate, 0)
 
   return (
-    <section className="relative py-32 md:py-40">
+    <section className="relative py-14 md:py-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="animate-glow-pulse absolute right-1/4 top-1/4 h-[350px] w-[350px] rounded-full bg-accent/5 blur-[120px]" />
+        <div className="animate-glow-pulse absolute right-1/4 top-1/4 h-[280px] w-[280px] rounded-full bg-accent/3 blur-[80px]" />
       </div>
 
       <div

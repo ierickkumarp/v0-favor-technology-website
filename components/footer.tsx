@@ -16,9 +16,9 @@ const serviceLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-secondary/20">
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-border/50 bg-secondary/15">
+      <div className="mx-auto max-w-7xl px-6 py-12">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
             <Link href="/" className="mb-4 flex items-center gap-2">
@@ -34,7 +34,7 @@ export function Footer() {
                 Favor
               </span>
             </Link>
-            <p className="mb-6 text-sm text-muted-foreground leading-relaxed">
+            <p className="mb-6 text-sm text-foreground/70 leading-relaxed">
               Your technology-powered growth partner. High-code web apps,
               performance marketing, and AI automation.
             </p>
@@ -124,7 +124,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 border-t border-border pt-8">
+        <div className="mt-8 border-t border-border/30 pt-6">
           <div className="mb-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-xs text-muted-foreground">
               {`\u00A9 ${new Date().getFullYear()} Favor. All rights reserved.`}

@@ -9,19 +9,16 @@ export function About() {
   const isInView = useInView(ref, { threshold: 0.2 })
 
   return (
-    <section id="about" className="relative py-20 md:py-28">
+    <section id="about" className="relative py-14 md:py-20">
       <div
         ref={ref}
         className={`mx-auto max-w-6xl px-6 transition-all duration-700 ${
           isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <div className="mb-6 flex items-center gap-3">
-          <div className="h-px flex-1 max-w-16 bg-accent/50" />
-          <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-            About Favor
-          </span>
-        </div>
+        <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-accent uppercase">
+          About Favor
+        </span>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>

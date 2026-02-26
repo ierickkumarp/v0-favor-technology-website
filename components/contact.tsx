@@ -39,7 +39,7 @@ export function Contact() {
   }
 
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-14 md:py-20">
       <div className="animate-glow-pulse absolute left-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[150px]" />
 
       <div

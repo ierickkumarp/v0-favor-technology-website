@@ -68,18 +68,14 @@ export function Divisions() {
   const isInView = useInView(ref, { threshold: 0.1 })
 
   return (
-    <section id="services" className="relative py-32 md:py-40">
-      <div className="animate-glow-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[150px]" />
+    <section id="services" className="relative py-14 md:py-20">
+      <div className="animate-glow-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] rounded-full bg-primary/3 blur-[80px]" />
 
       <div ref={ref} className="relative mx-auto max-w-6xl px-6">
-        <div className="mb-20 text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <div className="h-px w-12 bg-accent/50" />
-            <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-              Our Divisions
-            </span>
-            <div className="h-px w-12 bg-accent/50" />
-          </div>
+        <div className="mb-12 text-center">
+          <span className="mb-3 inline-block text-xs font-semibold tracking-widest text-accent uppercase">
+            Our Divisions
+          </span>
           <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
             Two Divisions, One Growth System
           </h2>

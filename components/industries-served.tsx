@@ -37,7 +37,7 @@ export function IndustriesServed() {
   const isInView = useInView(ref, { threshold: 0.1 })
 
   return (
-    <section ref={ref} className="relative py-32 md:py-40">
+    <section ref={ref} className="relative py-14 md:py-20">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="mb-20 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">

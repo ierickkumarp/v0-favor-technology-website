@@ -16,9 +16,9 @@ export function PricingCards() {
   }, [])
 
   return (
-    <section className="relative py-32 md:py-40">
+    <section className="relative py-14 md:py-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="animate-glow-pulse absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[150px]" />
+        <div className="animate-glow-pulse absolute top-1/4 left-1/2 -translate-x-1/2 h-[350px] w-[350px] rounded-full bg-primary/3 blur-[80px]" />
       </div>
 
       <div ref={ref} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

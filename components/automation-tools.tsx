@@ -27,9 +27,9 @@ export function AutomationTools() {
   const { ref, isInView } = useInViewRef()
 
   return (
-    <section className="relative py-32 md:py-40">
+    <section className="relative py-14 md:py-20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-primary/4 blur-[120px]" />
+        <div className="absolute right-1/4 bottom-1/4 h-80 w-80 rounded-full bg-primary/3 blur-[80px]" />
       </div>
 
       <div ref={ref} className="relative mx-auto max-w-6xl px-6">
@@ -38,13 +38,9 @@ export function AutomationTools() {
             isInView ? "animate-fade-in-up" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <div className="h-px w-12 bg-accent/50" />
-            <span className="text-xs font-semibold tracking-widest text-accent uppercase">
-              Our Stack
-            </span>
-            <div className="h-px w-12 bg-accent/50" />
-          </div>
+          <span className="mb-3 inline-block text-xs font-semibold tracking-widest text-accent uppercase">
+            Our Stack
+          </span>
           <h2 className="mb-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl text-balance">
             Automation & Tools We Deploy
           </h2>

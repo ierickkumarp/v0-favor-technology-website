@@ -1,128 +1,40 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { ArrowRight, MessageCircle } from "lucide-react"
 
 export function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
-
-    let animationId: number
-    const particles: {
-      x: number
-      y: number
-      vx: number
-      vy: number
-      size: number
-      opacity: number
-    }[] = []
-
-    const resize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-    resize()
-    window.addEventListener("resize", resize)
-
-    // Create particles
-    for (let i = 0; i < 60; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 2 + 0.5,
-        opacity: Math.random() * 0.5 + 0.1,
-      })
-    }
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-      particles.forEach((p) => {
-        p.x += p.vx
-        p.y += p.vy
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1
-
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(66, 165, 245, ${p.opacity})`
-        ctx.fill()
-      })
-
-      // Draw connections
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x
-          const dy = particles[i].y - particles[j].y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist < 150) {
-            ctx.beginPath()
-            ctx.moveTo(particles[i].x, particles[i].y)
-            ctx.lineTo(particles[j].x, particles[j].y)
-            ctx.strokeStyle = `rgba(33, 150, 243, ${0.12 * (1 - dist / 150)})`
-            ctx.lineWidth = 0.5
-            ctx.stroke()
-          }
-        }
-      }
-
-      animationId = requestAnimationFrame(animate)
-    }
-    animate()
-
-    return () => {
-      cancelAnimationFrame(animationId)
-      window.removeEventListener("resize", resize)
-    }
-  }, [])
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Particle canvas */}
-      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-background via-background to-secondary/5 pt-20">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute -right-1/4 top-1/4 h-96 w-96 rounded-full bg-accent/3 blur-[80px]" />
+      </div>
 
-      {/* Glow orbs */}
-      <div className="animate-glow-pulse absolute top-1/4 left-1/4 -z-10 h-[400px] w-[400px] rounded-full bg-primary/10 blur-[120px]" />
-      <div className="animate-glow-pulse absolute right-1/4 bottom-1/4 -z-10 h-[300px] w-[300px] rounded-full bg-accent/10 blur-[100px]" style={{ animationDelay: "2s" }} />
-
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-        {/* Badge */}
-        <div className="mb-10 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-5 py-2.5">
-          <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Technology-Powered Growth Partner
-          </span>
-        </div>
-
+      <div className="relative z-10 mx-auto max-w-6xl px-6 w-full">
         {/* Headline */}
-        <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl lg:text-8xl text-balance leading-[1.05]">
+        <h1 className="mb-8 text-6xl font-bold tracking-tight text-foreground sm:text-7xl md:text-8xl lg:text-[6rem] leading-[1.05]">
           We Engineer Growth{" "}
           <span className="text-accent">Through Systems</span>
         </h1>
 
-        {/* Subheadline */}
-        <p className="mb-4 text-lg font-medium tracking-wide text-foreground/70 md:text-xl">
-          High-Code Web Applications. Omnichannel Marketing. AI Automation.
-        </p>
-        <p className="mx-auto mb-12 max-w-2xl text-base text-muted-foreground/80 leading-relaxed md:text-lg">
-          Favor combines production-grade web engineering with full-funnel
-          performance marketing to help ambitious brands scale predictably
-          and profitably.
-        </p>
+        {/* Subtitle - 60% width */}
+        <div className="mb-12 max-w-2xl">
+          <p className="mb-4 text-xl font-medium tracking-wide text-foreground/90">
+            High-Code Web Applications. Omnichannel Marketing. AI Automation.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            Favor combines production-grade web engineering with full-funnel
+            performance marketing to help ambitious brands scale predictably
+            and profitably.
+          </p>
+        </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        {/* CTAs - aligned left */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:gap-4">
           <Link
             href="/pricing"
-            className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-accent hover:shadow-[0_0_30px_rgba(33,150,243,0.4)]"
+            className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-accent hover:shadow-lg"
           >
             View Plans
             <ArrowRight
@@ -139,31 +51,6 @@ export function Hero() {
           </Link>
         </div>
 
-        {/* Stats row */}
-        <div className="mt-20 flex flex-wrap items-center justify-center gap-px rounded-2xl border border-border/50 bg-border/20 overflow-hidden">
-          {[
-            { value: "200+", label: "Campaigns Managed" },
-            { value: "3-6X", label: "Avg ROAS Delivered" },
-            { value: "11+", label: "Active Client Partners" },
-            { value: "13+", label: "Platforms Covered" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex-1 min-w-[140px] bg-background/80 px-6 py-5 text-center backdrop-blur-sm">
-              <p className="text-2xl font-bold text-accent md:text-3xl">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-[10px] tracking-wider text-muted-foreground uppercase md:text-xs">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="flex h-8 w-5 items-start justify-center rounded-full border-2 border-muted-foreground/30 p-1">
-          <div className="h-2 w-1 animate-bounce rounded-full bg-accent" />
-        </div>
       </div>
     </section>
   )

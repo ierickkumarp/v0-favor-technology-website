@@ -22,8 +22,8 @@ export function CtaBanner({
   const isInView = useInView(ref, { threshold: 0.3 })
 
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="animate-glow-pulse absolute inset-0 -z-10 mx-auto h-[300px] w-[500px] rounded-full bg-primary/8 blur-[140px]" />
+    <section className="relative py-14 md:py-20">
+      <div className="animate-glow-pulse absolute inset-0 -z-10 mx-auto h-[250px] w-[400px] rounded-full bg-primary/4 blur-[100px]" />
 
       <div
         ref={ref}
@@ -39,7 +39,7 @@ export function CtaBanner({
         </p>
         <Link
           href={ctaHref}
-          className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-accent hover:shadow-[0_0_30px_rgba(33,150,243,0.4)]"
+          className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-accent hover:shadow-lg"
         >
           {ctaText}
           <ArrowRight
