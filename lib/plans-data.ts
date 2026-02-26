@@ -151,6 +151,31 @@ export const plans: Plan[] = [
       { id: "ai-ecom", name: "AI Product Descriptions", price: 10000, description: "AI-generated product titles & descriptions at scale" },
     ],
   },
+  {
+    slug: "custom",
+    name: "Custom Web Development",
+    tagline: "Built. Owned. Scaled.",
+    startingPrice: 0,
+    minContract: "Project-based",
+    bestFor: "Brands needing custom web applications, platforms, or complex integrations",
+    description:
+      "High-code web applications built from scratch. React, Node.js, databases, APIs, and deployment. We build what you need and hand over full source code and IP rights.",
+    highlights: [
+      "Custom web app architecture & design",
+      "React + Next.js frontend development",
+      "Node.js backend & API development",
+      "Database design & optimization",
+      "Third-party integrations (payments, CRM, etc.)",
+      "Full source code & documentation handover",
+    ],
+    platforms: [],
+    addOns: [
+      { id: "hosting-custom", name: "Hosting & DevOps", price: 15000, description: "Vercel/AWS setup, CI/CD pipelines, monitoring" },
+      { id: "maintenance-custom", name: "Post-Launch Support", price: 20000, description: "3-month maintenance & bug fixes included" },
+      { id: "seo-custom", name: "SEO Integration", price: 10000, description: "Structured data, performance optimization, sitemap" },
+      { id: "ai-custom", name: "AI Features", price: 25000, description: "LLM integration, chatbots, recommendation engines" },
+    ],
+  },
 ]
 
 export function getPlanBySlug(slug: string): Plan | undefined {

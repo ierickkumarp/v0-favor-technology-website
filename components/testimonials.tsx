@@ -119,9 +119,9 @@ export function Testimonials({ filter }: TestimonialsProps) {
     : allTestimonials
 
   return (
-    <section className="relative py-32 md:py-40">
+    <section className="relative py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6">
-        <div className="mb-20 text-center">
+        <div className="mb-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-accent/50" />
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">

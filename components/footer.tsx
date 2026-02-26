@@ -28,6 +28,7 @@ export function Footer() {
                 width={36}
                 height={36}
                 className="rounded-lg"
+                loading="lazy"
               />
               <span className="text-xl font-bold tracking-tight text-foreground">
                 Favor

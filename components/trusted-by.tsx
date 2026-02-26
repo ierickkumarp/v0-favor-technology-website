@@ -35,14 +35,14 @@ export function TrustedBy() {
   const isInView = useInView(ref, { threshold: 0.3 })
 
   return (
-    <section className="relative py-16 md:py-20">
+    <section className="relative py-12 md:py-16">
       <div
         ref={ref}
         className={`mx-auto max-w-5xl px-6 transition-all duration-700 ${
           isInView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
         }`}
       >
-        <p className="mb-8 text-center text-xs font-semibold tracking-widest text-muted-foreground/60 uppercase">
+        <p className="mb-6 text-center text-xs font-semibold tracking-widest text-muted-foreground/60 uppercase">
           Trusted by ambitious brands across India
         </p>
 
