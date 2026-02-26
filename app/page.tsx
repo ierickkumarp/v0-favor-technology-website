@@ -4,7 +4,6 @@ import { About } from "@/components/about"
 import { Divisions } from "@/components/divisions"
 import { WhyFavor } from "@/components/why-favor"
 import { ExecutionFramework } from "@/components/execution-framework"
-import { GrowthPartners } from "@/components/growth-partners"
 import { AutomationTools } from "@/components/automation-tools"
 import { Testimonials } from "@/components/testimonials"
 import { CtaBanner } from "@/components/cta-banner"
@@ -18,7 +17,6 @@ export default function Home() {
       <Divisions />
       <WhyFavor />
       <ExecutionFramework />
-      <GrowthPartners />
       <AutomationTools />
       <Testimonials />
       <CtaBanner

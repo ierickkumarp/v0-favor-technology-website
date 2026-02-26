@@ -1,22 +1,35 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import { useInView } from "@/hooks/use-in-view"
 import { Mail, Phone, Send } from "lucide-react"
+import { getPlanBySlug } from "@/lib/plans-data"
 
 const services = [
-  "Web App Development",
-  "Performance Marketing",
-  "SEO & Content Marketing",
-  "AI & CRM Automation",
-  "Full Growth Strategy",
-  "Pricing Plan Inquiry",
+  "Growth Starter (Marketing)",
+  "Scale Pro (Marketing)",
+  "Dominate (Marketing)",
+  "E-Commerce Performance",
+  "Custom Web Development",
 ]
 
 export function Contact() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { threshold: 0.15 })
   const [submitted, setSubmitted] = useState(false)
+  const searchParams = useSearchParams()
+  const [selectedPlan, setSelectedPlan] = useState("")
+
+  useEffect(() => {
+    const planParam = searchParams.get("plan")
+    if (planParam) {
+      const plan = getPlanBySlug(planParam)
+      if (plan) {
+        setSelectedPlan(plan.name)
+      }
+    }
+  }, [searchParams])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -110,7 +123,12 @@ export function Contact() {
                   <select
                     id="service"
                     required
-                    className="w-full rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground focus:border-accent/50 focus:outline-none focus:ring-1 focus:ring-accent/30"
+                    value={selectedPlan}
+                    onChange={(e) => setSelectedPlan(e.target.value)}
+                    disabled={!!searchParams.get("plan")}
+                    className={`w-full rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground focus:border-accent/50 focus:outline-none focus:ring-1 focus:ring-accent/30 ${
+                      searchParams.get("plan") ? "opacity-75 cursor-not-allowed" : ""
+                    }`}
                   >
                     <option value="" className="bg-background text-muted-foreground">
                       Select a service

@@ -64,15 +64,28 @@ export function PricingCards() {
 
                 {/* Price */}
                 <div className="mb-6">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-bold text-foreground md:text-4xl">
-                      {mounted ? formatINR(plan.startingPrice) : <span className="inline-block h-8 w-28 animate-pulse rounded bg-muted" />}
-                    </span>
-                    <span className="text-sm text-muted-foreground">/month</span>
-                  </div>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Min contract: {plan.minContract}
-                  </p>
+                  {plan.slug === "custom" ? (
+                    <>
+                      <p className="text-3xl font-bold text-foreground md:text-4xl mb-2">
+                        Custom Pricing
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Based on requirements and reference projects
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-3xl font-bold text-foreground md:text-4xl">
+                          {mounted ? formatINR(plan.startingPrice) : <span className="inline-block h-8 w-28 animate-pulse rounded bg-muted" />}
+                        </span>
+                        <span className="text-sm text-muted-foreground">/month</span>
+                      </div>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        Min contract: {plan.minContract}
+                      </p>
+                    </>
+                  )}
                 </div>
 
                 {/* Best For */}
@@ -102,14 +115,14 @@ export function PricingCards() {
 
                 {/* CTA */}
                 <Link
-                  href={`/pricing/${plan.slug}`}
+                  href={`/contact?plan=${plan.slug}`}
                   className={`flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition-all ${
                     isPopular
                       ? "bg-primary text-primary-foreground hover:bg-accent hover:shadow-[0_0_30px_rgba(33,150,243,0.4)]"
                       : "border border-border bg-secondary/40 text-foreground hover:border-accent/40 hover:bg-primary/20"
                   }`}
                 >
-                  View Full Breakdown
+                  {plan.slug === "custom" ? "Request Custom Quote" : "Get Started"}
                   <ArrowRight
                     size={14}
                     className="transition-transform group-hover:translate-x-1"

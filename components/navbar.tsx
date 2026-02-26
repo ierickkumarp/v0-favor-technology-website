@@ -17,6 +17,7 @@ const navLinks = [
       { label: "Favor Digital Marketing", href: "/services/marketing" },
     ],
   },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ]
@@ -59,9 +60,9 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass-card border-b border-border py-2"
+          ? "bg-background/80 backdrop-blur-md border-b border-border py-3"
           : "bg-transparent py-4"
       }`}
     >
