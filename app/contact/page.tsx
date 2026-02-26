@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
-import { Contact } from "@/components/contact"
+import { ContactWrapper } from "@/components/contact-wrapper"
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -19,7 +19,7 @@ export default function ContactPage() {
           { label: "Contact" },
         ]}
       />
-      <Contact />
+      <ContactWrapper />
     </>
   )
 }
