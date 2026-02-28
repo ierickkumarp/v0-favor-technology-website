@@ -30,7 +30,7 @@ export function Hero() {
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-4">
           <Link
             href="/pricing"
-            className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-accent hover:shadow-lg"
+            className="group flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-sm font-semibold text-accent-foreground transition-all hover:bg-[#d4e8f0] hover:shadow-lg"
           >
             View Plans
             <ArrowRight
@@ -40,7 +40,7 @@ export function Hero() {
           </Link>
           <Link
             href="/contact"
-            className="flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-accent/40 hover:bg-secondary/70"
+            className="flex items-center gap-2 rounded-lg border border-primary/40 bg-transparent px-8 py-4 text-sm font-semibold text-accent transition-all hover:bg-primary/20"
           >
             <MessageCircle size={16} />
             Book Strategy Call

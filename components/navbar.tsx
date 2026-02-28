@@ -59,7 +59,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-primary/20 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-primary/15 shadow-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -99,15 +99,15 @@ export function Navbar() {
                   />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-3 w-56 rounded-xl bg-[#1a1a1a] border-2 border-primary shadow-2xl z-50">
+                  <div className="absolute top-full left-0 mt-3 w-56 rounded-xl bg-[#161B22] border border-primary/30 shadow-lg z-50">
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
                         className={`block rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                           isActive(child.href)
-                            ? "bg-primary/40 text-white"
-                            : "text-gray-100 hover:bg-primary/25"
+                            ? "bg-primary/50 text-accent"
+                            : "text-accent hover:bg-primary/40"
                         }`}
                       >
                         {child.label}
@@ -132,7 +132,7 @@ export function Navbar() {
           )}
           <Link
             href="/contact"
-            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:bg-primary/80 hover:shadow-lg"
+            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-accent-foreground transition-all hover:bg-[#d4e8f0] hover:shadow-lg"
           >
             Book Strategy Call
           </Link>
