@@ -59,7 +59,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0b1220] border-b border-foreground/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-primary/30 shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -99,15 +99,15 @@ export function Navbar() {
                   />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-3 w-56 rounded-xl bg-[#111827] border border-foreground/10 p-2 shadow-xl">
+                  <div className="absolute top-full left-0 mt-3 w-56 rounded-xl bg-white border-2 border-primary shadow-2xl z-50">
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className={`block rounded-lg px-4 py-2.5 text-sm transition-colors ${
+                        className={`block rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                           isActive(child.href)
-                            ? "bg-primary/20 text-accent"
-                            : "text-foreground/70 hover:bg-primary/15 hover:text-foreground"
+                            ? "bg-primary/30 text-foreground"
+                            : "text-foreground hover:bg-primary/15"
                         }`}
                       >
                         {child.label}
@@ -132,7 +132,7 @@ export function Navbar() {
           )}
           <Link
             href="/contact"
-            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-accent hover:shadow-lg"
+            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:bg-primary/80 hover:shadow-lg"
           >
             Book Strategy Call
           </Link>

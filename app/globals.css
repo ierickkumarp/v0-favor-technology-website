@@ -4,30 +4,30 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0F172A;
-  --foreground: #f8fafc;
-  --card: rgba(37, 99, 235, 0.05);
-  --card-foreground: #f8fafc;
-  --popover: #111827;
-  --popover-foreground: #f8fafc;
-  --primary: #2563EB;
+  --background: #edf8fa;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #b4b4b4;
   --primary-foreground: #ffffff;
-  --secondary: #111827;
-  --secondary-foreground: #cbd5e1;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #2563EB;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #4a4a4a;
+  --muted: #e0e0e0;
+  --muted-foreground: #7a7a7a;
+  --accent: #b4b4b4;
   --accent-foreground: #ffffff;
   --destructive: #e74c3c;
   --destructive-foreground: #ffffff;
-  --border: rgba(37, 99, 235, 0.1);
-  --input: rgba(37, 99, 235, 0.08);
-  --ring: #2563EB;
-  --chart-1: #2563EB;
-  --chart-2: #3b82f6;
-  --chart-3: #60a5fa;
-  --chart-4: #93c5fd;
-  --chart-5: #dbeafe;
+  --border: rgba(180, 180, 180, 0.3);
+  --input: rgba(180, 180, 180, 0.15);
+  --ring: #b4b4b4;
+  --chart-1: #b4b4b4;
+  --chart-2: #c4c4c4;
+  --chart-3: #d4d4d4;
+  --chart-4: #e0e0e0;
+  --chart-5: #f0f0f0;
   --radius: 0.75rem;
 }
 
