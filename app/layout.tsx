@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from "next/script";
 import { Inter, Geist_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Navbar } from '@/components/navbar'
@@ -69,6 +70,18 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <Analytics />
+        <Script
+src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}`}
+strategy="afterInteractive"
+/>
+<Script id="google-ads">
+{`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');
+`}
+</Script>
       </body>
     </html>
   )
